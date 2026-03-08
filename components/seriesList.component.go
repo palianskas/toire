@@ -89,7 +89,7 @@ func NewSeriesList() SeriesListCtx {
 		ContextBase: NewContextBase(reflect.TypeOf(SeriesListCtx{}).Name()),
 	}
 
-	p := paginator.New()
+	p := paginator.New(paginator.WithPerPage(20))
 	ctx.pager = p
 
 	p.Type = paginator.Arabic
